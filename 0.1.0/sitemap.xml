@@ -4,4 +4,20 @@
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/</loc>
          <lastmod>2025-05-26</lastmod>
     </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/kubernetes-redis-migration-solution/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/kubernetes-redis-technologies/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/kubernetes-upgrade-tool-analysis/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/redis-migration-tool-summary/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
 </urlset>
