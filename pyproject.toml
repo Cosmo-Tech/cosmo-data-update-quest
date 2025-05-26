@@ -1,0 +1,57 @@
+[metadata]
+licence_files = ["LICENSE"]
+
+[project]
+name = "cosmo_data_update_quest"
+authors = [{ name = "Cosmo Tech", email = "platform@cosmotech.com" }]
+description = "CosmoDUQ"
+urls.Homepage = "https://www.cosmotech.com"
+urls.Source = "https://github.com/Cosmo-Tech/cosmo-data-update-quest"
+urls.Documentation = "https://cosmo-tech.github.io/cosmo-data-update-quest"
+dynamic = ["version", "dependencies", "optional-dependencies"]
+readme = { file = "README.md", content-type = "text/markdown" }
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | generated
+  | __pycache__
+)/
+'''
+
+[tool.setuptools]
+include-package-data = true
+package-data."*" = [
+    "requirements.txt",
+    "requirements.doc.txt",
+    "requirements.dev.txt",
+    "requirements.all.txt"
+]
+zip-safe = false
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cosmotech.*"]
+
+[tool.setuptools.dynamic]
+version.attr = "cosmotech.data_update_quest.__version__"
+dependencies.file = "requirements.txt"
+optional-dependencies.doc.file = "requirements.doc.txt"
+optional-dependencies.dev.file = "requirements.dev.txt"
+optional-dependencies.all.file = "requirements.all.txt"
