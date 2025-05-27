@@ -1,0 +1,15 @@
+parameters:
+  version: "Get the version of the CLI"
+description: "Cosmo Data Update Quest CLI"
+content: |
+    ⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⠿⠿⠷⣶⣄⠀⠀⠀⠀⠀
+    ⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠁⠀⠀⢀⣀⡀⠙⣷⡀⠀⠀⠀
+      ⠀⠀⠀⡀⠀⠀⠀⠀⠀⢠⣿⠁⠀⠀⠀⠘⠿⠃⠀⢸⣿⣿⣿⣿
+      ⠀⣠⡿⠛⢷⣦⡀⠀⠀⠈⣿⡄⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⠟
+      ⢰⡿⠁⠀⠀⠙⢿⣦⣤⣤⣼⣿⣄⠀⠀⠀⠀⠀⢴⡟⠛⠋⠁⠀
+      ⣿⠇⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠈⣿⡀    Welcome to CosmoDUQ,
+      ⣿⠀⠀⠀⠀⠀⠀┏┓┏┓┳┳┓⠀⠀⠀⠀⠀⢹⡇    the Data Update Quest!
+      ⣿⡆⠀⠀⠀⠀⠀┃ ┗┓┃┃┃⠀⠀⠀⠀⠀⣼⡇⠀⠀⠀ Your configurable migration tool
+      ⠸⣷⠀⠀⠀⠀⠀┗┛┗┛┛ ┗⠀⠀⠀⠀⢠⡿⠀⠀⠀⠀
+      ⠀⠹⣷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣰⡿⠁⠀⠀⠀       ⠀
+      ⠀⠀⠀⠉⠙⠛⠿⠶⣶⣶⣶⣶⣶⠶⠿⠟⠛⠉⠀⠀⠀⠀⠀⠀                        v{version}

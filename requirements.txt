@@ -1,2 +1,2 @@
 # Requirements for the Cosmo Data Update Quest
-pyyaml
+cosmotech-acceleration-library~=1.0.0

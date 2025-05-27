@@ -44,6 +44,8 @@ package-data."*" = [
 ]
 zip-safe = false
 
+[project.scripts]
+csm-duq = "cosmotech.data_update_quest.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
