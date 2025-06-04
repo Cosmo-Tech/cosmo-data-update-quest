@@ -1,0 +1,4 @@
+description: Generate migration templates from OpenAPI files.
+parameters:
+  output_dir: "Directory to save generated templates"
+save_file_target: "Templates generated and saved to {output_dir}"

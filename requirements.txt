@@ -1,2 +1,3 @@
 # Requirements for the Cosmo Data Update Quest
 cosmotech-acceleration-library~=1.0.0
+deepdiff~=6.2.0
