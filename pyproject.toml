@@ -14,6 +14,11 @@ readme = { file = "README.md", content-type = "text/markdown" }
 [build-system]
 requires = ["setuptools", "wheel"]
 
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "--cov-report term-missing:skip-covered --cov=cosmotech.data_update_quest"
+
 [tool.black]
 line-length = 120
 target-version = ["py311"]
@@ -45,7 +50,7 @@ package-data."*" = [
 zip-safe = false
 
 [project.scripts]
-csm-duq = "cosmotech.data_update_quest.cli.__main__:main"
+csm-duq = "cosmotech.data_update_quest_cli.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
