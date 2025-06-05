@@ -5,4 +5,6 @@
 # etc., to any person is prohibited unless it has been previously and
 # specifically authorized by written means by Cosmo Tech.
 
-__version__ = "0.1.0"
+from cosmotech.orchestrator.utils.logger import get_logger
+
+LOGGER = get_logger("csm.duq.cli")
