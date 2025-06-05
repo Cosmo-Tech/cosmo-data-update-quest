@@ -5,11 +5,11 @@
 # etc., to any person is prohibited unless it has been previously and
 # specifically authorized by written means by Cosmo Tech.
 
-from cosmotech.data_update_quest.cli.utils.click import click
-from cosmotech.data_update_quest.core.migration.template_generator import MigrationTemplateGenerator
-from cosmotech.orchestrator.utils.translate import T
-from cosmotech.data_update_quest.cli.utils.logger import LOGGER
 from cosmotech.csm_data.utils.decorators import translate_help
+from cosmotech.orchestrator.utils.translate import T
+
+from cosmotech.data_update_quest_cli.utils.click import click
+from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 
 
 @click.command("generate-templates")
@@ -25,6 +25,8 @@ from cosmotech.csm_data.utils.decorators import translate_help
 )
 @translate_help("data_update_quest.commands.generate_templates.description")
 def generate_templates(source_path: str, target_path: str, source_model: str, target_model: str, output_dir: str):
+    from cosmotech.data_update_quest.core.migration.template_generator import MigrationTemplateGenerator
+
     generator = MigrationTemplateGenerator.from_openapi_files(source_path, target_path, source_model, target_model)
 
     # Save all templates to the specified output directory
