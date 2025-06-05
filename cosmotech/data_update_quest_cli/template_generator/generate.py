@@ -5,10 +5,10 @@
 # etc., to any person is prohibited unless it has been previously and
 # specifically authorized by written means by Cosmo Tech.
 
-from cosmotech.data_update_quest.cli.utils.click import click
+from cosmotech.data_update_quest_cli.utils.click import click
 from cosmotech.data_update_quest.core.migration.template_generator import MigrationTemplateGenerator
 from cosmotech.orchestrator.utils.translate import T
-from cosmotech.data_update_quest.cli.utils.logger import LOGGER
+from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 from cosmotech.csm_data.utils.decorators import translate_help
 
 

@@ -6,13 +6,13 @@
 # specifically authorized by written means by Cosmo Tech.
 
 from cosmotech.orchestrator.utils.translate import T
-from cosmotech.data_update_quest.cli.utils.click import click
+from cosmotech.data_update_quest_cli.utils.click import click
 import click_log
 from cosmotech.csm_data.utils.decorators import translate_help
 from cosmotech.data_update_quest import __version__
-from cosmotech.data_update_quest.cli.utils.logger import LOGGER
+from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 
-from cosmotech.data_update_quest.cli.template_generator.generate import generate_templates
+from cosmotech.data_update_quest_cli.template_generator.generate import generate_templates
 
 
 def print_version(ctx, param, value):
