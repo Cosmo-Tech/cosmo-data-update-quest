@@ -7,4 +7,4 @@
 
 from cosmotech.orchestrator.utils.logger import get_logger
 
-LOGGER = get_logger("csm.duq")
+LOGGER = get_logger("csm.duq.cli")
