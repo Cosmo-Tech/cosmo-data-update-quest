@@ -1,3 +1,9 @@
 # Development requirements
 black~=24.3.0
 pre-commit
+
+# Test requirements
+pytest
+pytest-docker
+pytest-cov
+pytest-datadir
