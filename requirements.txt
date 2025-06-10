@@ -1,2 +1,4 @@
 # Requirements for the Cosmo Data Update Quest
 cosmotech-acceleration-library~=1.0.0
+deepdiff~=8.5.0
+jq~=1.8.0
