@@ -1,0 +1,6 @@
+description: Dump all CosmotechAPI objects as json files.
+parameters:
+  file_path: "Directory to save dumped files"
+  password: "Redis database password"
+  host: "Redis database host"
+  port: "Redis database port"

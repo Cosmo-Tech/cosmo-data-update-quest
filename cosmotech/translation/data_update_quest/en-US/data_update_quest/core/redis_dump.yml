@@ -1,0 +1,4 @@
+dump: "Dumped {domain}"
+redis_connection: "Connecting to redis...."
+redis_index: "Redis indexes retrieved :"
+file_saved: "Files saved to {file_path}redis_data"
