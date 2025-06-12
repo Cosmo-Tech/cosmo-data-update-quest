@@ -1,0 +1,3 @@
+host: "Redis database host"
+port: "Redis database port"
+password: "Redis database password"
