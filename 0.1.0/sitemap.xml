@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/migrations/3.1_to_3.2/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/example/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/kubernetes-redis-migration-solution/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/kubernetes-redis-technologies/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/kubernetes-upgrade-tool-analysis/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/notes/redis-migration-tool-summary/</loc>
-         <lastmod>2025-06-10</lastmod>
+         <lastmod>2025-06-16</lastmod>
     </url>
 </urlset>
