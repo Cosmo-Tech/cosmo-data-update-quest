@@ -13,15 +13,16 @@ from cosmotech.data_update_quest_cli.utils.click import click
 from cosmotech.data_update_quest_cli.utils.decorators import redis_connection_parameters
 
 
+@click.command("redis_file_upload")
 @click.option(
     "--file_path",
     "-f",
     type=click.Path(dir_okay=True, readable=True),
+    envvar="REDIS_FILE_PATH",
     help=T("data_update_quest.commands.redis_file_upload.parameters.file_path"),
     required=True,
 )
 @redis_connection_parameters
 @translate_help("data_update_quest.commands.redis_file_upload.description")
-@click.command("redis_file_upload")
-def redis_file_upload_command(file_path: str, password: str, host: str, port: str):
+def redis_file_upload_command(file_path, password, host, port):
     file_upload(file_path=file_path, host=host, port=port, password=password)

@@ -21,6 +21,7 @@ from cosmotech.data_update_quest_cli.utils.logger import LOGGER
     "--file_path",
     "-f",
     type=click.Path(dir_okay=True, readable=True),
+    envvar="REDIS_FILE_PATH",
     help=T("data_update_quest.commands.redis_dump.parameters.file_path"),
     required=True,
 )

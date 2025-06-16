@@ -47,7 +47,7 @@ def redis_dump(file_path, host, port, password, index_list):
         for doc in result.docs:
             json_id = json.loads(doc.json)["id"]
 
-            with open(file=path / json_id, mode="w") as f:
+            with open(file=path / (json_id + ".json"), mode="w") as f:
                 f.write(doc.json)
                 LOGGER.info(f'{T("data_update_quest.core.redis_dump.dump").format(index=index):<20} :    {json_id}')
 
@@ -64,7 +64,10 @@ def file_upload(file_path, host, port, password):
         indexes.setdefault(x, f"com.cosmotech.{x.name}.domain.{x.name.capitalize()}Idx")
 
     for index in indexes:
-        p = Path(index)
-        for file in p.iterdir():
-            with open(file=Path(file), mode=r) as f:
-                r.json().set(f"{indexes[index]}:", Path(file), file)
+        index_p = p / index
+        for json_file in index_p.glob("*.json"):
+            json_name = json_file.name.split(".")[0]
+            r.json().set(f"{indexes[index]}:{json_name}", ".", json.load(json_file.open()))
+            LOGGER.info(
+                f'{T("data_update_quest.core.redis_file_upload.upload").format(index=index):<20} :    {json_name}'
+            )
