@@ -11,7 +11,7 @@ from cosmotech.data_update_quest_cli.utils.click import click
 from cosmotech.data_update_quest_cli.utils.decorators import redis_connection_parameters
 
 
-@redis_connection_parameters
 @click.command("redis_list_index")
+@redis_connection_parameters
 def redis_list_index_command(host, port, password):
     print(get_redis_indexes(get_redis_client(host=host, port=port, password=password), index_list=None))

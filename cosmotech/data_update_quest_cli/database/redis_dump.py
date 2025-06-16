@@ -16,6 +16,7 @@ from cosmotech.data_update_quest_cli.utils.decorators import redis_connection_pa
 from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 
 
+@click.command("redis_dump")
 @click.option(
     "--file_path",
     "-f",
@@ -33,7 +34,6 @@ from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 )
 @redis_connection_parameters
 @translate_help("data_update_quest.commands.redis_dump.description")
-@click.command("redis_dump")
 def redis_dump_command(file_path: str, password: str, host: str, port: str, index_list: Optional[tuple]):
     redis_dump(file_path=file_path, host=host, port=port, password=password, index_list=index_list)
     LOGGER.info(T("data_update_quest.core.redis_dump.file_saved").format(file_path=file_path))
