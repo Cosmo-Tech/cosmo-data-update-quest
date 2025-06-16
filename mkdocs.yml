@@ -48,6 +48,10 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
 
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/templates.css
+
 markdown_extensions:
   - admonition
   - attr_list
