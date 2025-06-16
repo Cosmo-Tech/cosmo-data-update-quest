@@ -13,8 +13,12 @@ from cosmotech.data_update_quest_cli.utils.click import click
 
 def redis_connection_parameters(func):
     @wraps(func)
-    @click.option("--host", type=str, default="localhost", help=T("data_update_quest.commands.redis.host"))
-    @click.option("--port", type=int, default=6379, help=T("data_update_quest.commands.redis.port"))
+    @click.option(
+        "--host", type=str, default="localhost", envvar="REDIS_HOST", help=T("data_update_quest.commands.redis.host")
+    )
+    @click.option(
+        "--port", type=int, default=6379, envvar="REDIS_PORT", help=T("data_update_quest.commands.redis.port")
+    )
     @click.option(
         "--password",
         "-p",

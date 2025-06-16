@@ -1,0 +1,3 @@
+description: Upload the CosmotechAPI objects to redis
+parameters:
+  file_path: "The directory containing the organized CosmotechAPI objects json"
