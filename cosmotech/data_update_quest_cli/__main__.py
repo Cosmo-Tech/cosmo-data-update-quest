@@ -15,6 +15,7 @@ from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 from cosmotech.data_update_quest_cli.template_generator.generate import generate_templates
 from cosmotech.data_update_quest_cli.database.redis_dump import redis_dump_command
 from cosmotech.data_update_quest_cli.database.redis_list_index import redis_list_index_command
+from cosmotech.data_update_quest_cli.database.redis_file_upload import redis_file_upload_command
 
 
 def print_version(ctx, param, value):
@@ -44,6 +45,7 @@ def main(ctx):
 main.add_command(generate_templates, name="generate-templates")
 main.add_command(redis_dump_command, name="redis-dump")
 main.add_command(redis_list_index_command, name="redis-list-index")
+main.add_command(redis_file_upload_command, name="redis-file-upload")
 
 if __name__ == "__main__":
     main()

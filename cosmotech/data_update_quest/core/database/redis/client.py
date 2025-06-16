@@ -50,3 +50,21 @@ def redis_dump(file_path, host, port, password, index_list):
             with open(file=path / json_id, mode="w") as f:
                 f.write(doc.json)
                 LOGGER.info(f'{T("data_update_quest.core.redis_dump.dump").format(index=index):<20} :    {json_id}')
+
+
+def file_upload(file_path, host, port, password):
+    r = get_redis_client(host=host, port=port, password=password)
+
+    p = Path(file_path)
+    if not p.is_dir():
+        raise Exception()
+
+    indexes = {}
+    for x in p.iterdir():
+        indexes.setdefault(x, f"com.cosmotech.{x.name}.domain.{x.name.capitalize()}Idx")
+
+    for index in indexes:
+        p = Path(index)
+        for file in p.iterdir():
+            with open(file=Path(file), mode=r) as f:
+                r.json().set(f"{indexes[index]}:", Path(file), file)
