@@ -8,7 +8,6 @@
 from cosmotech.csm_data.utils.decorators import translate_help
 from cosmotech.orchestrator.utils.translate import T
 
-from cosmotech.data_update_quest.core.database.redis.client import file_upload
 from cosmotech.data_update_quest_cli.utils.click import click
 from cosmotech.data_update_quest_cli.utils.decorators import redis_connection_parameters
 
@@ -25,4 +24,6 @@ from cosmotech.data_update_quest_cli.utils.decorators import redis_connection_pa
 @redis_connection_parameters
 @translate_help("data_update_quest.commands.redis_file_upload.description")
 def redis_file_upload_command(file_path, password, host, port):
+    from cosmotech.data_update_quest.core.database.redis.client import file_upload
+
     file_upload(file_path=file_path, host=host, port=port, password=password)

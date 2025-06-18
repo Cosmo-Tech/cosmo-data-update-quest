@@ -36,38 +36,39 @@ def get_redis_indexes(r, index_list: Optional[list[str]]):
 
 
 def redis_dump(file_path, host, port, password, index_list):
-    r = get_redis_client(host=host, port=port, password=password)
-    indexes = get_redis_indexes(r, index_list)
+    redis_client = get_redis_client(host=host, port=port, password=password)
+    indexes = get_redis_indexes(redis_client, index_list)
 
     for index in indexes:
-        result = r.ft(indexes[index]).search("*")
+        result = redis_client.ft(indexes[index]).search("*")
         path = Path(file_path) / index
         path.mkdir(parents=True, exist_ok=True)
 
         for doc in result.docs:
             json_id = json.loads(doc.json)["id"]
 
-            with open(file=path / (json_id + ".json"), mode="w") as f:
-                f.write(doc.json)
+            with open(file=path / (json_id + ".json"), mode="w") as file:
+                file.write(doc.json)
                 LOGGER.info(f'{T("data_update_quest.core.redis_dump.dump").format(index=index):<20} :    {json_id}')
 
 
 def file_upload(file_path, host, port, password):
-    r = get_redis_client(host=host, port=port, password=password)
+    redis_client = get_redis_client(host=host, port=port, password=password)
 
-    p = Path(file_path)
-    if not p.is_dir():
+    path = Path(file_path)
+    if not path.is_dir():
         raise Exception()
 
     indexes = {}
-    for x in p.iterdir():
-        indexes.setdefault(x, f"com.cosmotech.{x.name}.domain.{x.name.capitalize()}Idx")
+    for index in path.iterdir():
+        indexes.setdefault(index, f"com.cosmotech.{index.name}.domain.{index.name.capitalize()}Idx")
 
     for index in indexes:
-        index_p = p / index
+        index_p = path / index
         for json_file in index_p.glob("*.json"):
             json_name = json_file.name.split(".")[0]
-            r.json().set(f"{indexes[index]}:{json_name}", ".", json.load(json_file.open()))
+            with json_file.open() as file:
+                redis_client.json().set(f"{indexes[index]}:{json_name}", ".", json.load(file))
             LOGGER.info(
                 f'{T("data_update_quest.core.redis_file_upload.upload").format(index=index):<20} :    {json_name}'
             )
