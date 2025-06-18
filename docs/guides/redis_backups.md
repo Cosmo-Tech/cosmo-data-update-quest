@@ -97,16 +97,16 @@ docker tag ghcr.io/cosmo-tech/cosmotech-redis:1.0.12 csm-redis
 Launch a Redis container using your backup data:
 
 ```bash title="Starting a local Redis with backup data"
-docker run -e REDIS_PASSWORD=$REDIS_PASSWORD -e REDIS_NODES=0 -e REDIS_AOF_ENABLED=no -p 6379:6379 -v /data:/bitnami/redis/data csm-redis
+docker run -e REDIS_PASSWORD=$REDIS_PASSWORD -e REDIS_AOF_ENABLED=no -p 6379:6379 -v /data:/bitnami/redis/data csm-redis /opt/bitnami/scripts/redis/run.sh --cluster-enabled no
 ```
 
 This command:
 
 - Uses the environment variable `REDIS_PASSWORD` for authentication
-- Disables Redis clustering with `REDIS_NODES=0`
 - Disables AOF persistence with `REDIS_AOF_ENABLED=no`
 - Maps port 6379 for Redis access
 - Mounts your local `/data` directory (containing the dump file) to the container's data directory
+- Runs the redis instance with cluster mode set to off, allowing a standalone local use
 
 Once running, you can connect to this Redis instance using `redis-cli` with the password defined in the `REDIS_PASSWORD` environment variable.
 

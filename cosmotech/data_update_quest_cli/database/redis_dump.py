@@ -10,7 +10,6 @@ from typing import Optional
 from cosmotech.csm_data.utils.decorators import translate_help
 from cosmotech.orchestrator.utils.translate import T
 
-from cosmotech.data_update_quest.core.database.redis.client import redis_dump
 from cosmotech.data_update_quest_cli.utils.click import click
 from cosmotech.data_update_quest_cli.utils.decorators import redis_connection_parameters
 from cosmotech.data_update_quest_cli.utils.logger import LOGGER
@@ -36,5 +35,7 @@ from cosmotech.data_update_quest_cli.utils.logger import LOGGER
 @redis_connection_parameters
 @translate_help("data_update_quest.commands.redis_dump.description")
 def redis_dump_command(file_path, password, host, port, index_list: Optional[tuple]):
+    from cosmotech.data_update_quest.core.database.redis.client import redis_dump
+
     redis_dump(file_path=file_path, host=host, port=port, password=password, index_list=index_list)
     LOGGER.info(T("data_update_quest.core.redis_dump.file_saved").format(file_path=file_path))
