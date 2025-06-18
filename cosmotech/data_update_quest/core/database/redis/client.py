@@ -57,7 +57,9 @@ def file_upload(file_path, host, port, password):
 
     path = Path(file_path)
     if not path.is_dir():
-        raise Exception()
+        raise ValueError(
+            f"The provided file path '{file_path}' is not a directory. Please provide a valid directory path."
+        )
 
     indexes = {}
     for index in path.iterdir():
