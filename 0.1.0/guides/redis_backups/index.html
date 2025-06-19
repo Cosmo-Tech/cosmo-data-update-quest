@@ -1266,15 +1266,15 @@ docker<span class="w"> </span>tag<span class="w"> </span>ghcr.io/cosmo-tech/cosm
 </code></pre></div>
 <h3 id="step-2-start-a-local-redis-instance-with-your-backup-data">Step 2: Start a Local Redis Instance with Your Backup Data<a class="headerlink" href="#step-2-start-a-local-redis-instance-with-your-backup-data" title="Permanent link">&para;</a></h3>
 <p>Launch a Redis container using your backup data:</p>
-<div class="highlight"><span class="filename">Starting a local Redis with backup data</span><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">REDIS_PASSWORD</span><span class="o">=</span><span class="nv">$REDIS_PASSWORD</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">REDIS_NODES</span><span class="o">=</span><span class="m">0</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">REDIS_AOF_ENABLED</span><span class="o">=</span>no<span class="w"> </span>-p<span class="w"> </span><span class="m">6379</span>:6379<span class="w"> </span>-v<span class="w"> </span>/data:/bitnami/redis/data<span class="w"> </span>csm-redis
+<div class="highlight"><span class="filename">Starting a local Redis with backup data</span><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">REDIS_PASSWORD</span><span class="o">=</span><span class="nv">$REDIS_PASSWORD</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">REDIS_AOF_ENABLED</span><span class="o">=</span>no<span class="w"> </span>-p<span class="w"> </span><span class="m">6379</span>:6379<span class="w"> </span>-v<span class="w"> </span>/data:/bitnami/redis/data<span class="w"> </span>csm-redis<span class="w"> </span>/opt/bitnami/scripts/redis/run.sh<span class="w"> </span>--cluster-enabled<span class="w"> </span>no
 </code></pre></div>
 <p>This command:</p>
 <ul>
 <li>Uses the environment variable <code>REDIS_PASSWORD</code> for authentication</li>
-<li>Disables Redis clustering with <code>REDIS_NODES=0</code></li>
 <li>Disables AOF persistence with <code>REDIS_AOF_ENABLED=no</code></li>
 <li>Maps port 6379 for Redis access</li>
 <li>Mounts your local <code>/data</code> directory (containing the dump file) to the container's data directory</li>
+<li>Runs the redis instance with cluster mode set to off, allowing a standalone local use</li>
 </ul>
 <p>Once running, you can connect to this Redis instance using <code>redis-cli</code> with the password defined in the <code>REDIS_PASSWORD</code> environment variable.</p>
 <h2 id="restoring-a-backup-to-a-remote-redis-instance">Restoring a Backup to a Remote Redis Instance<a class="headerlink" href="#restoring-a-backup-to-a-remote-redis-instance" title="Permanent link">&para;</a></h2>
