@@ -29,7 +29,7 @@ Learn how to make Redis database backups and restore those.
 :material-database-refresh-outline: __Redis I/O__
 
 ---
-Learn how to interact with Redis pulling and pushing data.
+Learn how to interact with Redis pulling and pushing data using CSM-DUQ.
 
 ---
 <footer markdown>

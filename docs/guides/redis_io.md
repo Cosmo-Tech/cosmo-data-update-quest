@@ -9,7 +9,7 @@ This guide explains how to interact with Redis to download and upload data using
 
 Any command using redis has multiple parameters to configure
 
-- `host` with a default value at `localhost`.  
+  - `host` with a default value at `localhost`.  
     &emsp;
     It can be set either :  
         &emsp;&emsp;
@@ -23,7 +23,7 @@ Any command using redis has multiple parameters to configure
         - while calling a command with `--port`.  
           &emsp;&emsp;
         - as an environment variable under `REDIS_PORT`.
-- `password` it can be set either :  
+  - `password` it can be set either :  
     &emsp;
     \- while a command with `-p` or `--password`.  
     &emsp;

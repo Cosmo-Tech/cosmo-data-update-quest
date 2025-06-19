@@ -26,17 +26,15 @@ def get_redis_indexes(r, index_list: Optional[list[str]]):
 
     indexes = {}
     if index_list:
-        for index_name in index_list:
-            index = f"com.cosmotech.{index_name.lower()}.domain.{index_name.capitalize()}Idx"
-            indexes[index_name] = index
-            LOGGER.info(f"  -   {index}")
-
+        full_index_list = list(
+            f"com.cosmotech.{index_name.lower()}.domain.{index_name.capitalize()}Idx" for index_name in index_list)
     else:
-        index_list = r.execute_command("FT._LIST")
-        for index in index_list:
-            index_name = index.split(".")[2]
-            indexes[index_name] = index
-            LOGGER.info(f"  -   {index}")
+        full_index_list = r.execute_command("FT._LIST")
+
+    for index in full_index_list:
+        index_name = index.split(".")[2]
+        indexes[index_name] = index
+        LOGGER.info(f"  -   {index}")
 
     return indexes
 
