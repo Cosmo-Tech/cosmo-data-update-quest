@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Migration tool framework for Cosmo Tech API">
+        <meta name="description" content="Interact with redis to download and upload data">
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/migrations/3.1_to_3.2/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/guides/redis_io/">
       
       
-        <link rel="prev" href="../../guides/redis_io/">
+        <link rel="prev" href="../redis_backups/">
       
       
-        <link rel="next" href="../../notes/example/">
+        <link rel="next" href="../../migrations/3.1_to_3.2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Migration listing for 3.1 to 3.2 - Cosmo Data Update Quest Documentation</title>
+        <title>Redis I/O - Cosmo Data Update Quest Documentation</title>
       
     
     
@@ -63,11 +63,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Migration listing for 3.1 to 3.2 - Cosmo Data Update Quest Documentation" >
+        <meta  property="og:title"  content="Redis I/O - Cosmo Data Update Quest Documentation" >
       
-        <meta  property="og:description"  content="Migration tool framework for Cosmo Tech API" >
+        <meta  property="og:description"  content="Interact with redis to download and upload data" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/assets/images/social/migrations/3.1_to_3.2.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/assets/images/social/guides/redis_io.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -75,15 +75,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/migrations/3.1_to_3.2/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/guides/redis_io/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Migration listing for 3.1 to 3.2 - Cosmo Data Update Quest Documentation" >
+        <meta  name="twitter:title"  content="Redis I/O - Cosmo Data Update Quest Documentation" >
       
-        <meta  name="twitter:description"  content="Migration tool framework for Cosmo Tech API" >
+        <meta  name="twitter:description"  content="Interact with redis to download and upload data" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/assets/images/social/migrations/3.1_to_3.2.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/cosmo-data-update-quest/0.1.0/assets/images/social/guides/redis_io.png" >
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migration-listing-for-31-to-32" class="md-skip">
+        <a href="#redis-io" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration listing for 3.1 to 3.2
+              Redis I/O
             
           </span>
         </div>
@@ -267,11 +267,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../guides/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -289,13 +291,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../migrations/3.1_to_3.2/" class="md-tabs__link">
           
   
   
@@ -407,6 +407,8 @@
       
   
   
+    
+  
   
   
     
@@ -417,117 +419,6 @@
         
       
         
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../guides/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Guides
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Guides
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/redis_backups/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Redis Backups
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/redis_io/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Redis I/O
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
       
         
       
@@ -547,28 +438,60 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
-    Migrations
+    Guides
     
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Migrations
+            Guides
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redis_backups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redis Backups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -586,7 +509,164 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Redis I/O
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redis I/O
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redis-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-download" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Download
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Upload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-index-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Index List
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Migrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Migrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrations/3.1_to_3.2/" class="md-nav__link">
         
   
   
@@ -597,7 +677,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -809,6 +888,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redis-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-download" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Download
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Upload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-index-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Index List
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -826,8 +958,73 @@
   
 
 
-<h1 id="migration-listing-for-31-to-32">Migration listing for 3.1 to 3.2<a class="headerlink" href="#migration-listing-for-31-to-32" title="Permanent link">&para;</a></h1>
-<p>TODO</p>
+<h1 id="redis-io">Redis I/O<a class="headerlink" href="#redis-io" title="Permanent link">&para;</a></h1>
+<p>This guide explains how to interact with Redis to download and upload data using CSM-DUQ</p>
+<h2 id="redis-use">Redis Use<a class="headerlink" href="#redis-use" title="Permanent link">&para;</a></h2>
+<p>Any command using redis has multiple parameters to configure</p>
+<ul>
+<li><code>host</code> with a default value at <code>localhost</code>.<br />
+    &emsp;
+    It can be set either :<br />
+        &emsp;&emsp;
+        - while calling a command with <code>--host</code>.<br />
+          &emsp;&emsp;
+        - as an environment variable under <code>REDIS_HOST</code>.  </li>
+<li><code>port</code> with a default value at <code>6379</code>.<br />
+      &emsp;
+    It can be set either :<br />
+          &emsp;&emsp;
+        - while calling a command with <code>--port</code>.<br />
+          &emsp;&emsp;
+        - as an environment variable under <code>REDIS_PORT</code>.</li>
+<li><code>password</code> it can be set either :<br />
+    &emsp;
+    - while a command with <code>-p</code> or <code>--password</code>.<br />
+    &emsp;
+    - as an environment variable under <code>REDIS_SECRET</code>.</li>
+</ul>
+<h2 id="redis-storage">Redis Storage<a class="headerlink" href="#redis-storage" title="Permanent link">&para;</a></h2>
+<p>Whether it is downloaded or data to be uploaded, all data to be used are to be organized the same way with :</p>
+<ul>
+<li><code>parent folder</code> the name is unimportant.</li>
+<li><code>index folders</code> with the name of the index used for this category of objects.</li>
+<li><code>object files</code> the files containing the objects downloaded/to be uploaded to redis, most of the time as <code>json</code>.<br />
+    &emsp;
+    The name of the file should be the id of the object stored inside</li>
+</ul>
+<p>It should be structured as such :</p>
+<div class="highlight"><pre><span></span><code>parent folder
+│
+├──  index folder
+│    ├── object file
+│    └── object file
+│
+├── index folder
+│   └── object file
+│
+└── index folder
+    ├── object file
+    ├── object file
+    └── object file
+</code></pre></div>
+<h2 id="redis-download">Redis Download<a class="headerlink" href="#redis-download" title="Permanent link">&para;</a></h2>
+<p>To download data from redis, the command <code>redis-dump</code> is used, this command can take multiple arguments on top of the default redis ones :</p>
+<ul>
+<li><code>file path</code> is the folder in which the downloaded data will be stored.
+    It can either be set while calling with <code>--file_path</code> or <code>-f</code> or with the environment variable <code>REDIS_FILE_PATH</code>.  </li>
+<li><code>index list</code> allows to only download data stored under certain indexes.<br />
+    It can be set while calling with <code>--index_list</code> or <code>-i</code> and can be used multiple times to query multiple indexes.<br />
+    If it's not used, then all indexes will be collected and all indexed objects in the database will be downloaded.</li>
+</ul>
+<h2 id="redis-upload">Redis Upload<a class="headerlink" href="#redis-upload" title="Permanent link">&para;</a></h2>
+<p>To upload data to redis, the command <code>redis-file-upload</code> is used, this command take one argument on top of the default redis ones :</p>
+<ul>
+<li><code>file path</code> is the folder in which the data to upload is stored.
+    It can either be set while calling with <code>--file_path</code> or <code>-f</code> or with the environment variable <code>REDIS_FILE_PATH</code>. </li>
+</ul>
+<p>Before running this command, assert that the names of the index folders are the proper domain names and the object files the correct object id.</p>
+<h2 id="redis-index-list">Redis Index List<a class="headerlink" href="#redis-index-list" title="Permanent link">&para;</a></h2>
+<p>If you're not sure about which index exist in your redis database, you can get the list by calling <code>redis-list-index</code> command</p>
 
 
 
@@ -866,7 +1063,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../guides/redis_io/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Redis I/O">
+          <a href="../redis_backups/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Redis Backups">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -876,20 +1073,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Redis I/O
+                Redis Backups
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../notes/example/" class="md-footer__link md-footer__link--next" aria-label="Next: Example">
+          <a href="../../migrations/3.1_to_3.2/" class="md-footer__link md-footer__link--next" aria-label="Next: Migration listing for 3.1 to 3.2">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Example
+                Migration listing for 3.1 to 3.2
               </div>
             </div>
             <div class="md-footer__button md-icon">
