@@ -66,7 +66,7 @@ To download data from redis, the command `redis-dump` is used, this command can 
     It can either be set while calling with `--file_path` or `-f` or with the environment variable `REDIS_FILE_PATH`.  
 - `index list` allows to only download data stored under certain indexes.  
     It can be set while calling with `--index_list` or `-i` and can be used multiple times to query multiple indexes.  
-    If it's not used, then all index will be collected and all indexed objects in the database will be downloaded.
+    If it's not used, then all indexes will be collected and all indexed objects in the database will be downloaded.
 
 
 ## Redis Upload

@@ -26,8 +26,9 @@ def get_redis_indexes(r, index_list: Optional[list[str]]):
 
     indexes = {}
     if index_list:
-        full_index_list = list(
-            f"com.cosmotech.{index_name.lower()}.domain.{index_name.capitalize()}Idx" for index_name in index_list)
+        full_index_list = [
+            f"com.cosmotech.{index_name.lower()}.domain.{index_name.capitalize()}Idx" for index_name in index_list
+        ]
     else:
         full_index_list = r.execute_command("FT._LIST")
 
