@@ -1,4 +1,4 @@
 description: Dump all CosmotechAPI objects as json files.
 parameters:
   file_path: "Directory to save dumped files"
-  index_list: "Redis index list, constructed in cosmotechAPI as \"com.cosmotech.indexname.domain.IndexnameIdx\""
+  index_list: "Redis index list, only the name of the index is needed"

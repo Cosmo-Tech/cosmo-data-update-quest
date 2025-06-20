@@ -21,15 +21,20 @@ def get_redis_client(host, port, password):
 
 
 def get_redis_indexes(r, index_list: Optional[list[str]]):
-    if not index_list:
-        index_list = r.execute_command("FT._LIST")
 
     LOGGER.info(T("data_update_quest.core.redis_dump.redis_index"))
-    indexes = {}
 
-    for index in index_list:
+    indexes = {}
+    if index_list:
+        full_index_list = [
+            f"com.cosmotech.{index_name.lower()}.domain.{index_name.capitalize()}Idx" for index_name in index_list
+        ]
+    else:
+        full_index_list = r.execute_command("FT._LIST")
+
+    for index in full_index_list:
         index_name = index.split(".")[2]
-        indexes.setdefault(index_name, index)
+        indexes[index_name] = index
         LOGGER.info(f"  -   {index}")
 
     return indexes
