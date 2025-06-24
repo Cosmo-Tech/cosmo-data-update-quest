@@ -4,6 +4,7 @@ omit =
     */tests/*
     */site-packages/*
     */__pycache__/*
+    **/migration/template_generator.py
 
 [report]
 exclude_lines =
