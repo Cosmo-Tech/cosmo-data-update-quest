@@ -1,0 +1,8 @@
+{
+  "steps": [
+    {
+      "id": "coucou",
+      "command": "python scripts/entrypoint.py"
+    }
+  ]
+}
